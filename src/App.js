@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export const App = () => {
+  const [newJoke, setNewJoke] = useState("");
 
-export default App;
+  <div className="app-container">
+    return (
+    <>
+      <div className="app-heading">
+        <h1 className="app-heading-text">Chuckle Checklist</h1>
+      </div>
+      <div className="joke-add-form">
+        <input
+          className="joke-input"
+          type="text"
+          value={newJoke}
+          placeholder="New One Liner"
+          onChange={(change) => {}}
+        />
+        <button className="joke-input-submit">It's a Keeper</button>
+      </div>
+    </>
+    );
+  </div>;
+};
